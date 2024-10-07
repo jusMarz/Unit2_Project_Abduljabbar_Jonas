@@ -13,15 +13,64 @@ public class LinearEquation {
         this.y1 = y1;
         this.x2 = x2;
         this.y2 = y2;
-        slope = (((double) y2 - y1) /+ ((double) x2 - x1));
+        slope = (((double) y2 - y1) / ((double) x2 - x1));
         yIntercept = (y1 - (slope) * x1);
         distanceBetweenPoints = ((Math.sqrt(((x2 - x1)*(x2 - x1)) + ((y2 - y1)*(y2 - y1)))) + .005);
         distanceBetweenPoints -= distanceBetweenPoints % .01;
     }
     public String toString()
     {
+       String s = "First Pair: (" + x1 + "," + y1 + ") \nSecond Pair: (" + x2 + "," + y2 + ") \nSlope of Line: ";
 
-        return "First Pair: (" + x1 + "," + y1 + ") \n Second Pair: (" + x2 + "," + y2 + ") \n Slope of Line: " + slope + "\n Y intercept: " + yIntercept + "\n Slope intercept form: " + (y2 -y1)+"/"+ (x2-x1)+ "x + "+ yIntercept + "\n Distance between points: " + distanceBetweenPoints;
+        if (Math.round(slope) == (long) slope)
+    {
+        s += (int)(slope);
+    }
+        else
+        {
+            s += (y2 -y1)+"/"+ (x2-x1);
+        }
+
+        s += "\nY intercept: " + yIntercept + "\nSlope intercept form: ";
+
+        if (Math.round(slope) == (long) slope)
+        {
+            s += (int)(slope);
+        }
+        else
+        {
+            s += (y2 -y1)+"/"+ (x2-x1);
+        }
+
+        s += "x";
+
+        if (Math.round(yIntercept) == (long) yIntercept)
+        {
+            if (yIntercept == 0)
+            {
+                s += "";
+            }
+            else
+            {
+                s += " + " + (int)(yIntercept);
+            }
+
+        }
+        else
+        {
+            s += " + " + yIntercept;
+        }
+        s += "\nDistance between points: " + distanceBetweenPoints;
+
+
+
+        return s;
+
+
+
+       //return "First Pair: (" + x1 + "," + y1 + ") \n Second Pair: (" + x2 + "," + y2 + ") \n Slope of Line: "
+        // + slope + "\n Y intercept: " + yIntercept + "\n Slope intercept form: " + (y2 -y1)+"/"+ (x2-x1)+ "x + "+ yIntercept + "\n Distance between points: " + distanceBetweenPoints;
+
     }
     public String calculatePoint(double x3)
     {
