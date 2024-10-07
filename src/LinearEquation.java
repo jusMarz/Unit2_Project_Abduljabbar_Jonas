@@ -23,5 +23,8 @@ public class LinearEquation {
 
         return "First Pair: (" + x1 + "," + y1 + ") \n Second Pair: (" + x2 + "," + y2 + ") \n Slope of Line: " + slope + "\n Y intercept: " + yIntercept + "\n Slope intercept form: " + (y2 -y1)+"/"+ (x2-x1)+ "x + "+ yIntercept + "\n Distance between points: " + distanceBetweenPoints;
     }
-
+    public String calculatePoint(double x3)
+    {
+        return (("(" + x3 + "," + ((x3 * slope) + yIntercept)) + ")");
+    }
 }

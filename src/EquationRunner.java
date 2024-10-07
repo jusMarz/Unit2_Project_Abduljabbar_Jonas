@@ -18,5 +18,6 @@ public class EquationRunner {
         System.out.println(s);
         System.out.println("Enter in a third x value: ");
         double x = Double.parseDouble(userInput.nextLine());
+        System.out.println("Solved coordinate point is: " + s.calculatePoint(x));
     }
 }
