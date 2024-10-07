@@ -14,7 +14,8 @@ public class EquationRunner {
                 (Integer.parseInt(firstCoordinate.substring(firstCoordinate.indexOf("(") + 1,firstCoordinate.indexOf(",")))),
                 (Integer.parseInt(firstCoordinate.substring(firstCoordinate.indexOf(",") + 1,firstCoordinate.indexOf(")")))),
                 (Integer.parseInt(secondCoordinate.substring(secondCoordinate.indexOf("(") + 1,secondCoordinate.indexOf(",")))),
-                (Integer.parseInt(secondCoordinate.substring(secondCoordinate.indexOf(",") + 1,secondCoordinate.indexOf(")")))));
+                (Integer.parseInt(secondCoordinate.substring(secondCoordinate.indexOf(",") + 1,secondCoordinate.indexOf(")"))))
+        );
         System.out.println(s);
         System.out.println("Enter in a third x value: ");
         double x = Double.parseDouble(userInput.nextLine());
